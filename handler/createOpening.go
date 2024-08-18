@@ -8,6 +8,6 @@ import (
 
 func CreateOpeningHandler(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{
-		"msg": "CreateOpeningHandler",
+		"msg": "in file separede CreateOpeningHandler",
 	})
 }
