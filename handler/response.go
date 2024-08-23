@@ -16,7 +16,6 @@ func sendError(ctx *gin.Context, code int, msg string) {
 	})
 }
 
-
 func sendSuccess(ctx *gin.Context, op string, data interface{}) {
 	ctx.Header("Content-type", "application/json")
 	ctx.JSON(http.StatusOK, gin.H{
@@ -32,7 +31,6 @@ func sendSuccessCreate(ctx *gin.Context, op string, data interface{}) {
 		"data": data,
 	})
 }
-
 
 type ErrorResponse struct {
 	Message string `json:"message"`
@@ -54,3 +52,7 @@ type ShowOpeningResponse struct {
 	Data schemas.OpeningResponse `json:"data"`
 }
 
+type ListOpeningsResponse struct {
+	Message string `json:"message"`
+	Data []schemas.OpeningResponse `json:"data"`
+}
